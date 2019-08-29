@@ -4,6 +4,7 @@ import java.util.*;
 public class Go_with_the_Flow {
 	static int water = 0;
 	
+	//memperhitungkan letak spasi
 	static int before(Hashtable<Integer, Integer> x, int y){
 		int max = 0;
 		for(int i=-1;i<2;i++)
@@ -11,12 +12,14 @@ public class Go_with_the_Flow {
 		return max+1;
 	}
 	
+	//mengkosongkan hashtable
 	static Hashtable<Integer, Integer> clean(Hashtable<Integer,Integer> x){
 		for(int j=0;j<=water;j++)	
 			x.put(j, 0);
 		return x;
 	}
 	
+	//menghitung aliran spasi
 	static int flow(ArrayList<StringTokenizer> x){
 		Hashtable<Integer, Integer> river  = new Hashtable<Integer, Integer>();
 		Hashtable<Integer, Integer> stream  = new Hashtable<Integer, Integer>();
@@ -38,6 +41,7 @@ public class Go_with_the_Flow {
 		return most;
 	}
 	
+	//menata maksimum panjang satu baris
 	static ArrayList<StringTokenizer> stone(StringTokenizer x){
 		ArrayList<StringTokenizer> low = new ArrayList<StringTokenizer>();
 		int ln = x.toString().length();
